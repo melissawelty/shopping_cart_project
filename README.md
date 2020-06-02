@@ -1,9 +1,20 @@
 # Shopping Cart Project
-## Environment Setup 
-Create and activate a new Anaconda virtual environment:
-    
+## Project Description
+https://github.com/melissawelty/shopping_cart_project/blob/master/README.md
+
+## Installation
+
+Clone or download from [GitHub source] (https://github.com/melissawelty/shopping_cart_project), then navigate into the project repository:
+
+```sh
+cd shoppping_cart
 ```
-conda create -n shopping-env python=3.7 # first time only
-conda activate shopping-env
+
+## Usage
+
+Run the program:
+```py
+python shopping_cart.py
 ```
+
 

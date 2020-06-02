@@ -21,7 +21,7 @@ products = [
     {"id":18, "name": "Pizza for One Suprema Frozen Pizza", "department": "frozen", "aisle": "frozen pizza", "price": 12.50},
     {"id":19, "name": "Gluten Free Quinoa Three Cheese & Mushroom Blend", "department": "dry goods pasta", "aisle": "grains rice dried goods", "price": 3.99},
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
-] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
+ ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
 def to_usd(my_price):
     """
@@ -37,4 +37,9 @@ def to_usd(my_price):
 
 # TODO: write some Python code here to produce the desired output
 
-print(products)
+
+
+
+select_id = input("Please input product identifier: ") #> "9" (string)
+print(select_id)
+print(type(select_id))

@@ -39,22 +39,31 @@ def to_usd(my_price):
 
 # Info capture / input
 
-total_price = 0
+total_price = 0 # stores running total of price
+selected_ids = []
 
 while True:
     select_id = input("Please input product identifier: ") #> "9" (string)
     if select_id == "DONE":
         break
     else:
-        matching_products = [item for item in products if str(item["id"]) == str(select_id)]
-        matching_product = matching_products[0]
-        total_price = total_price + matching_product["price"]
-        print("SELECTED PRODUCT:" + matching_product["name"] + " " + str(matching_product["price"]))
-
-
-print("TOTAL PRICE: " + str(total_price)) # TODO format as USD
+        # # matching_products = [item for item in products if str(item["id"]) == str(select_id)]
+        # matching_product = matching_products[0]
+        # total_price = total_price + matching_product["price"]
+        # print("SELECTED PRODUCT:" + matching_product["name"] + " " + str(matching_product["price"]))
+        selected_ids.append(select_id)
 
 
 # info display / output 
 
+# print(selected_ids)
 
+
+for select_id in selected_ids:
+    matching_products = [item for item in products if str(item["id"]) == str(select_id)]
+    matching_product = matching_products[0]
+    total_price = total_price + matching_product["price"]
+    print("SELECTED PRODUCT:" + matching_product["name"] + " " + str(matching_product["price"]))
+     
+
+print("TOTAL PRICE: " + str(total_price)) # TODO format as USD

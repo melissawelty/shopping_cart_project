@@ -39,11 +39,15 @@ def to_usd(my_price):
 
 # Info capture / input
 
+while True:
+    select_id = input("Please input product identifier: ") #> "9" (string)
+    if select_id == "DONE":
+        break
+    else:
+        matching_products = [item for item in products if str(item["id"]) == str(select_id)]
+        matching_product = matching_products[0]
+        print("SELECTED PRODUCT:" + matching_product["name"] + " " + str(matching_product["price"]))
 
-select_id = input("Please input product identifier: ") #> "9" (string)
-matching_products = [item for item in products if str(item["id"]) == str(select_id)]
-matching_product = matching_products[0]
-print("SELECTED PRODUCT:" + matching_product["name"] + " " + str(matching_product["price"]))
 
 
 # info display / output 

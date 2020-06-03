@@ -43,7 +43,7 @@ total_price = 0 # stores running total of price
 selected_ids = []
 
 while True:
-    select_id = input("Please input product identifier: ") #> "9" (string)
+    select_id = input("Please input product identifier. If no more items input DONE: ") #> "9" (string)
     if select_id == "DONE":
         break
     else:
@@ -56,14 +56,21 @@ while True:
 
 # info display / output 
 
-# print(selected_ids)
+print(selected_ids)
 
+print("---------------------------------")
+print("WHOLE PAYCHECK GROCERY")
+print("www.wholepaycheckgrocery.com")
+print("---------------------------------")
+# time 
+print("---------------------------------")
 
 for select_id in selected_ids:
     matching_products = [item for item in products if str(item["id"]) == str(select_id)]
     matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
-    print("SELECTED PRODUCT:" + matching_product["name"] + " " + str(matching_product["price"]))
-     
+    print("SELECTED PRODUCTS:" + matching_product["name"] + " " + str(matching_product["price"]))
 
-print("TOTAL PRICE: " + str(total_price)) # TODO format as USD
+print("TOTAL PRICE: " + str(total_price))
+
+# TODO format as USD

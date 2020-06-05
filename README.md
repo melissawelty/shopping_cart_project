@@ -17,4 +17,9 @@ Run the program:
 python shopping_cart.py
 ```
 
+Enter valid product number manually or using scanner. 
+After all items have been scanned, enter "DONE."
+
+Program will calculate subtotal, tax, and order total. 
+
 

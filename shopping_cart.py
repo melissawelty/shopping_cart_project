@@ -44,7 +44,7 @@ while True:
     try:
         select_id = input("Please input product identifier. If no more items input DONE: ") #> "9" (string)  
         select_id = select_id.upper()
-    except ValueError:
+    except IndexError:
         print("Invalid product. Please try again")
         continue
     if select_id == "DONE":
@@ -55,7 +55,7 @@ while True:
 
 # info display / output 
 
-# print(selected_ids)
+
 
 print("---------------------------------")
 print("WHOLE PAYCHECK GROCERY")

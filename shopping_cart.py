@@ -1,5 +1,7 @@
 # shopping_cart.py
 
+from datetime import datetime
+
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
     {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
@@ -26,11 +28,8 @@ products = [
 def to_usd(my_price):
     """
     Converts a numeric value to usd-formatted string, for printing and display purposes.
-
     Param: my_price (int or float) like 4000.444444
-
     Example: to_usd(4000.444444)
-
     Returns: $4,000.44
     """
     return f"${my_price:,.2f}" #> $12,000.71
@@ -62,15 +61,31 @@ print("---------------------------------")
 print("WHOLE PAYCHECK GROCERY")
 print("www.wholepaycheckgrocery.com")
 print("---------------------------------")
-# time 
+now = datetime.now()
+date_time = now.strftime("%D, %r")
+print("CHECKOUT AT:", date_time)
 print("---------------------------------")
 
+print("SELECTED PRODUCTS:")
 for select_id in selected_ids:
     matching_products = [item for item in products if str(item["id"]) == str(select_id)]
     matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
-    print("SELECTED PRODUCTS:" + matching_product["name"] + " " + str(matching_product["price"]))
+   # print(matching_product["name"] + " " + str((f" + matching_product["price"])({price_usd})))
 
-print("TOTAL PRICE: " + str(total_price))
+
+print("---------------------------------")
+print("SUBTOTAL: $" + format(total_price, ",.2f"))
+sales_tax = total_price * .0875
+print("TAX: $" + format(sales_tax, ",.2f"))
+order_total = sales_tax + total_price
+print("TOTAL: $" + format(order_total, ",.2f"))
+#total
+
+print("---------------------------------")
+print("THANK YOU! COME AGAIN!")
+print("---------------------------------")
+
+# ERROR
 
 # TODO format as USD

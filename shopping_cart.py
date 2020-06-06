@@ -39,19 +39,20 @@ def to_usd(my_price):
 
 total_price = 0 # stores running total of price
 selected_ids = []
+valid_id = [str(v["id"]) for v in products]
+
 
 while True:
-    try:
-        select_id = input("Please input product identifier. If no more items input DONE: ") #> "9" (string)  
-        select_id = select_id.upper()
-    except IndexError:
-        print("Invalid product. Please try again")
-        continue
+    select_id = input("Please input product identifier. If no more items input DONE: ") #> "9" (string)  
+    select_id = select_id.upper()
     if select_id == "DONE":
         break
-    else:
+    elif select_id in valid_id: 
         selected_ids.append(select_id)
+    else:
+        print("Invalid Product ID. Please try again.")
 
+#enter wrong number error to keep going and readme file 
 
 # info display / output 
 

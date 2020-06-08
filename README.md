@@ -1,10 +1,13 @@
 # Shopping Cart Project
-## Project Description
-https://github.com/melissawelty/shopping_cart_project/blob/master/README.md
+
+See project description [here](https://github.com/melissawelty/shopping_cart_project/blob/master/README.md).
+
+## Prerequisites
+* Python 3.7
 
 ## Installation
 
-Clone or download from [GitHub source] (https://github.com/melissawelty/shopping_cart_project), then navigate into the project repository:
+Clone or download from [GitHub source](https://github.com/melissawelty/shopping_cart_project), then navigate into the project repository:
 
 ```sh
 cd shoppping_cart
